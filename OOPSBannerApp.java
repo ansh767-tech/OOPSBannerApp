@@ -1,24 +1,30 @@
 /**
- * OOPSBannerApp UC1 - OOPS Banner Display Application
+ * OOPSBannerApp UC5 - Render OOPS as Banner using Inline Array Initialization
  *
- * This class demonstrates a simple Java application that displays the
- * Object Oriented Programming System OOPS acronym to the console.
+ * This use case extends UC4 by defining and populating the String array in a more
+ * concise way at the time of declaration using String.join() method to create each
+ * line of the banner.
  *
  * @author Developer
- * @version 1.0
+ * @version 5.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  ***   " + "  ***   " + " ****** " + " ****** ");
-        System.out.println(" ** **  " + " ** **  " + " **   **" + " **     ");
-        System.out.println("**   ** " + "**   ** " + " **   **" + " **     ");
-        System.out.println("**   ** " + "**   ** " + " ****** " + " ****** ");
-        System.out.println("**   ** " + "**   ** " + " **     " + "     ** ");
-        System.out.println(" ** **  " + " ** **  " + " **     " + "     ** ");
-        System.out.println("  ***   " + "  ***   " + " **     " + " ****** ");
+        String[] lines = {
+            String.join(" ", " *** ", " *** ", " ***** ", " ***** "),
+            String.join(" ", "** **", "** **", "**  **", "**    "),
+            String.join(" ", "** **", "** **", "**  **", "**    "),
+            String.join(" ", "** **", "** **", "***** ", "***** "),
+            String.join(" ", "** **", "** **", "**    ", "    **"),
+            String.join(" ", "** **", "** **", "**    ", "    **"),
+            String.join(" ", " *** ", " *** ", "**    ", "***** ")
+        };
 
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
