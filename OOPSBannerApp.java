@@ -1,24 +1,25 @@
 /**
- * OOPSBannerApp UC1 - OOPS Banner Display Application
+ * OOPSBannerApp UC3 - OOPS Banner Application (Use Case 3)
  *
- * This class demonstrates a simple Java application that displays the
- * Object Oriented Programming System OOPS acronym to the console.
+ * This class extends the functionality of Use Case 2 by improving the way
+ * the "OOPS" banner is constructed and displayed. It uses the String.join()
+ * method to build each line of the banner instead of string concatenation.
  *
  * @author Developer
- * @version 1.0
+ * @version 3.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  ***   " + "  ***   " + " ****** " + " ****** ");
-        System.out.println(" ** **  " + " ** **  " + " **   **" + " **     ");
-        System.out.println("**   ** " + "**   ** " + " **   **" + " **     ");
-        System.out.println("**   ** " + "**   ** " + " ****** " + " ****** ");
-        System.out.println("**   ** " + "**   ** " + " **     " + "     ** ");
-        System.out.println(" ** **  " + " ** **  " + " **     " + "     ** ");
-        System.out.println("  ***   " + "  ***   " + " **     " + " ****** ");
+        System.out.println(String.join(" ", " *** ", " *** ", " ***** ", " ***** "));
+        System.out.println(String.join(" ", "** **", "** **", "**  **", "**    "));
+        System.out.println(String.join(" ", "** **", "** **", "**  **", "**    "));
+        System.out.println(String.join(" ", "** **", "** **", "***** ", "***** "));
+        System.out.println(String.join(" ", "** **", "** **", "**    ", "    **"));
+        System.out.println(String.join(" ", "** **", "** **", "**    ", "    **"));
+        System.out.println(String.join(" ", " *** ", " *** ", "**    ", "***** "));
 
     }
 }
